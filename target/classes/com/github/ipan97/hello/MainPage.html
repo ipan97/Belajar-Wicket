@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>
+		Welcome <span wicket:id="message"></span>
+	</h1>
+	<a wicket:id="signOut">SignOut</a>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Gender</th>
+			<th>Action</th>
+		</tr>
+		<tr wicket:id="rows">
+			<td wicket:id="name"></td>
+			<td wicket:id="gender"></td>
+			<td wicket:id="update"></td>
+			<td wicket:id="delete"></td>
+		</tr>
+	</table>
+	<div wicket:id="nav"></div>
+</body>
+</html>

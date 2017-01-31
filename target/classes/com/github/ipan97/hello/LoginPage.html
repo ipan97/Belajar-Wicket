@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Wicket Application</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+<script>
+	$(document).ready(function() {
+		$('#submit').click(function(e) {
+			var isValid = true;
+			$('#username,#password').each(function() {
+				if ($.trim($(this).val()) == '') {
+					isValid = false;
+					$(this).css({
+						"border" : "1px solid red",
+						"background" : "#FFCECE"
+					});
+				} else {
+					$(this).css({
+						"border" : "",
+						"background" : ""
+					});
+				}
+			});
+			if (isValid == false)
+				e.preventDefault();
+		});
+	});
+</script>
+</head>
+<body>
+	<form wicket:id="form" id="loginForm">
+		<div>
+			<label><b>Username</b></label> <input type="text"
+				wicket:id="userName" placeholder="Enter Username" id="username" />
+			<label><b>Password</b></label> <input type="password"
+				wicket:id="password" placeholder="Enter Password" id="password" />
+			<button type="submit" wicket:id="submit" id="submit">Login</button>
+		</div>
+	</form>
+</body>
+</html>
