@@ -8,7 +8,7 @@ public class WicketApplication extends WebApplication {
 	@Override
 	public Class<? extends Page> getHomePage() {
 		// TODO Auto-generated method stub
-		return BasePage.class;
+		return WicketPage.class;
 	}
 
 	@Override
